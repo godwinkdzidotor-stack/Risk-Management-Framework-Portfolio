@@ -86,6 +86,50 @@
       }
     }
 
+    /* Top nav buttons row */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border: 1px solid rgba(148,163,184,0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.25s ease-out;
+    }
+    .home-btn:hover {
+      background: linear-gradient(135deg, #1e293b, #334155);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+    .close-btn {
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #1e1b4b, #312e81);
+      border: 1px solid rgba(148,163,184,0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.25s ease-out;
+    }
+    .close-btn:hover {
+      background: linear-gradient(135deg, #312e81, #4338ca);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+    }
+
     /* Top Bar / Brand */
     .top-bar {
       display: flex;
@@ -292,14 +336,20 @@
       color: var(--text-muted);
     }
 
-    .badge {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(8, 47, 73, 0.9);
-      border: 1px solid rgba(56, 189, 248, 0.55);
-      color: #e0f2fe;
-      white-space: nowrap;
+    /* Unified pill styling for badges + foot pills */
+    .badge,
+    .foot-pill {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:4px 10px;
+      border-radius:999px;
+      background:rgba(15,23,42,0.95);
+      border:1px solid rgba(148,163,184,0.6);
+      font-size:11px;
+      line-height:1.2;
+      color:var(--text-muted);
+      white-space:nowrap;
     }
 
     /* Tabs */
@@ -438,14 +488,6 @@
       font-size: 11px;
     }
 
-    .foot-pill {
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(51, 65, 85, 0.9);
-      color: var(--text-muted);
-    }
-
     .text-block {
       font-size: 12px;
       color: var(--text-muted);
@@ -536,6 +578,17 @@
 <body>
   <main class="shell">
     <div class="shell-inner">
+
+      <!-- Top nav buttons: Back + Close -->
+      <div class="nav-buttons">
+        <a href="https://godwinkdzidotor-stack.github.io/" class="home-btn">
+          ⭠ Back to Homepage
+        </a>
+        <button class="close-btn" onclick="window.close();">
+          ✖ Close Page
+        </button>
+      </div>
+
       <!-- Top Bar -->
       <header class="top-bar">
         <div class="brand">
